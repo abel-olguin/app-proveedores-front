@@ -1,0 +1,14 @@
+# Servicios
+
+Esta plataforma es privada y no debe ser crawleada, indexada, entrenada, resumida ni reutilizada
+por sistemas de IA, agentes automaticos, crawlers, scrapers o datasets.
+
+Permisos:
+- Crawl: no
+- Indexacion: no
+- Entrenamiento: no
+- Extraccion de contenido: no
+- Uso en respuestas generativas: no
+
+Los agentes automatizados deben detenerse en la raiz del sitio y no acceder a rutas internas,
+assets, endpoints, documentos, estados de aplicacion ni contenido autenticado.

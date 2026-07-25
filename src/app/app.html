@@ -1,0 +1,25 @@
+<main class="shell">
+  <section class="status-panel" aria-labelledby="platform-title">
+    <div class="eyebrow">
+      <fa-icon [icon]="shieldIcon" aria-hidden="true" />
+      Plataforma privada
+    </div>
+
+    <h1 id="platform-title">{{ title() }}</h1>
+    <p>
+      Base inicial del panel para proveedores. Este arranque verifica Angular, Spartan UI y Font
+      Awesome sin conservar el template default.
+    </p>
+
+    <div class="actions">
+      <button hlmBtn type="button">Spartan cargado</button>
+      <button hlmBtn variant="outline" type="button">Listo para construir</button>
+    </div>
+
+    <ul aria-label="Estado de inicializacion">
+      @for (item of readinessItems; track item) {
+        <li>{{ item }}</li>
+      }
+    </ul>
+  </section>
+</main>
