@@ -1,0 +1,31 @@
+{
+  "app": {
+    "title": "Services",
+    "eyebrow": "Private platform",
+    "description": "Initial provider panel base. This startup verifies Angular, Spartan UI, Font Awesome, persistent preferences, theme, and translations.",
+    "actions": {
+      "spartanLoaded": "Spartan loaded",
+      "ready": "Ready to build"
+    },
+    "preferences": {
+      "language": "Language",
+      "theme": "Theme",
+      "languages": {
+        "esMx": "Español",
+        "enUs": "English"
+      },
+      "themes": {
+        "light": "Light",
+        "dark": "Dark"
+      }
+    },
+    "readiness": {
+      "angular": "Angular 22 initialized",
+      "spartan": "Spartan UI active",
+      "fontAwesome": "Font Awesome Angular loaded",
+      "privacy": "Robots and llms block crawling",
+      "settings": "Persistent v1 settings",
+      "i18n": "Translations ready"
+    }
+  }
+}

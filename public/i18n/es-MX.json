@@ -1,0 +1,31 @@
+{
+  "app": {
+    "title": "Servicios",
+    "eyebrow": "Plataforma privada",
+    "description": "Base inicial del panel para proveedores. Este arranque verifica Angular, Spartan UI, Font Awesome, preferencias persistentes, tema y traducciones.",
+    "actions": {
+      "spartanLoaded": "Spartan cargado",
+      "ready": "Listo para construir"
+    },
+    "preferences": {
+      "language": "Idioma",
+      "theme": "Tema",
+      "languages": {
+        "esMx": "Español",
+        "enUs": "English"
+      },
+      "themes": {
+        "light": "Claro",
+        "dark": "Oscuro"
+      }
+    },
+    "readiness": {
+      "angular": "Angular 22 inicializado",
+      "spartan": "Spartan UI activo",
+      "fontAwesome": "Font Awesome Angular cargado",
+      "privacy": "Robots y llms bloquean crawling",
+      "settings": "Settings v1 persistentes",
+      "i18n": "Traducciones listas"
+    }
+  }
+}
