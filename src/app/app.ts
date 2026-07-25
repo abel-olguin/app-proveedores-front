@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faShieldHalved } from '@fortawesome/free-solid-svg-icons';
+import { NgOptionComponent, NgSelectComponent } from '@ng-select/ng-select';
 import { TranslatePipe } from '@ngx-translate/core';
 import { HlmButton } from '@spartan-ng/helm/button';
-import { HlmNativeSelectImports } from '@spartan-ng/helm/native-select';
 import { I18nService } from './core/i18n/i18n.service';
 import { SupportedLanguage, ThemePreference } from './core/settings/user-settings.model';
 import { UserSettingsService } from './core/settings/user-settings.service';
@@ -11,7 +12,7 @@ import { ThemeService } from './core/theme/theme.service';
 
 @Component({
   selector: 'app-root',
-  imports: [FontAwesomeModule, HlmButton, HlmNativeSelectImports, TranslatePipe],
+  imports: [FontAwesomeModule, FormsModule, HlmButton, NgOptionComponent, NgSelectComponent, TranslatePipe],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

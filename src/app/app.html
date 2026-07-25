@@ -18,28 +18,34 @@
     <div class="preferences" aria-label="Preferencias">
       <label>
         {{ 'app.preferences.language' | translate }}
-        <select
-          hlmNativeSelect
-          [value]="userSettingsService.settings()?.language ?? 'es-MX'"
-          (change)="setLanguage($any($event.target).value)"
+        <ng-select
+          class="spartan-ng-select"
+          [ngModel]="userSettingsService.settings()?.language ?? 'es-MX'"
+          (ngModelChange)="setLanguage($event)"
+          [clearable]="false"
+          [searchable]="false"
+          [ariaLabel]="'app.preferences.language' | translate"
         >
           @for (language of languages; track language.value) {
-            <option [value]="language.value">{{ language.labelKey | translate }}</option>
+            <ng-option [value]="language.value">{{ language.labelKey | translate }}</ng-option>
           }
-        </select>
+        </ng-select>
       </label>
 
       <label>
         {{ 'app.preferences.theme' | translate }}
-        <select
-          hlmNativeSelect
-          [value]="userSettingsService.settings()?.theme ?? 'light'"
-          (change)="setTheme($any($event.target).value)"
+        <ng-select
+          class="spartan-ng-select"
+          [ngModel]="userSettingsService.settings()?.theme ?? 'light'"
+          (ngModelChange)="setTheme($event)"
+          [clearable]="false"
+          [searchable]="false"
+          [ariaLabel]="'app.preferences.theme' | translate"
         >
           @for (theme of themes; track theme.value) {
-            <option [value]="theme.value">{{ theme.labelKey | translate }}</option>
+            <ng-option [value]="theme.value">{{ theme.labelKey | translate }}</ng-option>
           }
-        </select>
+        </ng-select>
       </label>
     </div>
 
