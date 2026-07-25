@@ -1,0 +1,82 @@
+.auth-shell {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 18%, color-mix(in oklch, var(--primary) 10%, transparent), transparent 28%),
+    linear-gradient(180deg, var(--background), color-mix(in oklch, var(--background) 84%, var(--muted)));
+}
+
+.auth-content {
+  width: min(100%, 360px);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  border-radius: 18px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 1.65rem;
+  font-weight: 900;
+}
+
+h1 {
+  margin: 0;
+  color: var(--foreground);
+  font-size: clamp(2.25rem, 12vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+p {
+  max-width: 290px;
+  margin: 14px 0 0;
+  color: var(--muted-foreground);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.auth-actions {
+  width: min(100%, 300px);
+  display: grid;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.auth-button {
+  width: 100%;
+  height: 44px;
+  border-radius: 999px !important;
+  padding-inline: 20px !important;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.auth-button-primary {
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+}
+
+.auth-button-primary:hover {
+  background: color-mix(in oklch, var(--primary) 88%, var(--foreground)) !important;
+}
+
+.auth-button-outline {
+  border-color: var(--primary) !important;
+  background: transparent !important;
+  color: var(--primary) !important;
+}
+
+.auth-button-outline:hover {
+  background: color-mix(in oklch, var(--primary) 10%, transparent) !important;
+  color: var(--foreground) !important;
+}

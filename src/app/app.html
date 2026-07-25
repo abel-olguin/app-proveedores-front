@@ -1,58 +1,8 @@
-<main class="shell">
-  <section class="status-panel" aria-labelledby="platform-title">
-    <div class="eyebrow">
-      <fa-icon [icon]="shieldIcon" aria-hidden="true" />
-      {{ 'app.eyebrow' | translate }}
-    </div>
-
-    <h1 id="platform-title">{{ 'app.title' | translate }}</h1>
-    <p>
-      {{ 'app.description' | translate }}
-    </p>
-
-    <div class="actions">
-      <button hlmBtn type="button">{{ 'app.actions.spartanLoaded' | translate }}</button>
-      <button hlmBtn variant="outline" type="button">{{ 'app.actions.ready' | translate }}</button>
-    </div>
-
-    <div class="preferences" aria-label="Preferencias">
-      <label>
-        {{ 'app.preferences.language' | translate }}
-        <ng-select
-          class="spartan-ng-select"
-          [ngModel]="userSettingsService.settings()?.language ?? 'es-MX'"
-          (ngModelChange)="setLanguage($event)"
-          [clearable]="false"
-          [searchable]="false"
-          [ariaLabel]="'app.preferences.language' | translate"
-        >
-          @for (language of languages; track language.value) {
-            <ng-option [value]="language.value">{{ language.labelKey | translate }}</ng-option>
-          }
-        </ng-select>
-      </label>
-
-      <label>
-        {{ 'app.preferences.theme' | translate }}
-        <ng-select
-          class="spartan-ng-select"
-          [ngModel]="userSettingsService.settings()?.theme ?? 'light'"
-          (ngModelChange)="setTheme($event)"
-          [clearable]="false"
-          [searchable]="false"
-          [ariaLabel]="'app.preferences.theme' | translate"
-        >
-          @for (theme of themes; track theme.value) {
-            <ng-option [value]="theme.value">{{ theme.labelKey | translate }}</ng-option>
-          }
-        </ng-select>
-      </label>
-    </div>
-
-    <ul aria-label="Estado de inicializacion">
-      @for (item of readinessItems; track item) {
-        <li>{{ item | translate }}</li>
-      }
-    </ul>
-  </section>
-</main>
+<router-outlet />
+<hlm-toaster
+  [theme]="userSettingsService.settings()?.theme ?? 'light'"
+  position="bottom-center"
+  [visibleToasts]="3"
+  richColors
+  closeButton
+/>

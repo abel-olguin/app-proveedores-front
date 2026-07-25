@@ -6,7 +6,11 @@ describe('App', () => {
   beforeEach(async () => {
     localStorage.clear();
     Object.defineProperty(window, 'matchMedia', {
-      value: vi.fn().mockReturnValue({ matches: false }),
+      value: vi.fn().mockReturnValue({
+        matches: false,
+        addEventListener: vi.fn(),
+        removeEventListener: vi.fn(),
+      }),
       configurable: true,
     });
 
@@ -56,11 +60,10 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('should render the router outlet shell', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Servicios');
-    expect(compiled.textContent).toContain('Spartan cargado');
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
   });
 });

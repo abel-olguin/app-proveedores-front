@@ -1,5 +1,6 @@
 import { I18nService } from './i18n/i18n.service';
 import { initializeAppPreferences } from './app-initializer';
+import { AuthRedirectService } from '../auth/services/auth-redirect.service';
 import { UserSettings } from './settings/user-settings.model';
 import { UserSettingsService } from './settings/user-settings.service';
 import { ThemeService } from './theme/theme.service';
@@ -10,14 +11,17 @@ describe('initializeAppPreferences', () => {
     const userSettingsService = { initialize: vi.fn().mockReturnValue(settings) };
     const themeService = { apply: vi.fn() };
     const i18nService = { initialize: vi.fn() };
+    const authRedirectService = { initialize: vi.fn() };
 
     initializeAppPreferences(
       userSettingsService as unknown as UserSettingsService,
       themeService as unknown as ThemeService,
       i18nService as unknown as I18nService,
+      authRedirectService as unknown as AuthRedirectService,
     )();
 
     expect(themeService.apply).toHaveBeenCalledWith('dark');
     expect(i18nService.initialize).toHaveBeenCalledWith('es-MX');
+    expect(authRedirectService.initialize).toHaveBeenCalled();
   });
 });
