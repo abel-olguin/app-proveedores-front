@@ -1,18 +1,13 @@
 .splash-shell {
-  min-height: 100dvh;
-  display: grid;
-  place-items: center;
-  padding: 24px;
   background:
     radial-gradient(circle at 50% 14%, color-mix(in oklch, var(--primary) 10%, transparent), transparent 28%),
     linear-gradient(180deg, var(--background), color-mix(in oklch, var(--background) 84%, var(--muted)));
-  color: var(--foreground);
 }
 
 .splash-content {
-  width: min(100%, 360px);
   display: grid;
   justify-items: center;
+  align-content: center;
   text-align: center;
 }
 
@@ -21,7 +16,7 @@
   height: 58px;
   display: grid;
   place-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 26px;
   border-radius: 20px;
   background: var(--primary);
   color: var(--primary-foreground);
@@ -30,9 +25,10 @@
 }
 
 .splash-copy {
+  width: 100%;
   display: grid;
   justify-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 h1 {
@@ -52,23 +48,12 @@ p {
 }
 
 .splash-actions {
-  width: min(100%, 304px);
-  display: grid;
-  gap: 14px;
-  margin-top: 44px;
+  gap: 10px;
+  margin-top: 30px;
 }
 
 .splash-button {
-  width: 100%;
-  height: 48px;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 999px !important;
-  font-size: 0.92rem;
-  font-weight: 800;
-  text-align: center;
-  text-decoration: none;
+  justify-self: stretch;
 }
 
 .splash-button-primary {
@@ -76,32 +61,20 @@ p {
   color: var(--primary-foreground) !important;
 }
 
-.splash-button-primary:hover {
+.splash-button-primary:is(:hover, :focus-visible) {
   background: color-mix(in oklch, var(--primary) 88%, var(--foreground)) !important;
+  border-color: color-mix(in oklch, var(--primary) 88%, var(--foreground)) !important;
 }
 
 .splash-button-outline {
+  border: 1px solid var(--primary) !important;
   border-color: var(--primary) !important;
   background: transparent !important;
   color: var(--primary) !important;
 }
 
-.splash-button-outline:hover {
-  background: color-mix(in oklch, var(--primary) 10%, transparent) !important;
-  color: var(--foreground) !important;
-}
-
-@media (min-width: 640px) {
-  .splash-shell {
-    padding: 32px;
-  }
-
-  .splash-content {
-    width: min(100%, 420px);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 48px 38px;
-    background: color-mix(in oklch, var(--card) 94%, transparent);
-    box-shadow: 0 24px 70px rgb(0 0 0 / 0.08);
-  }
+.splash-button.splash-button-outline:is(:hover, :focus-visible) {
+  border-color: var(--primary) !important;
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
 }

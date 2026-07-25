@@ -4,9 +4,9 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { HlmButton } from '@spartan-ng/helm/button';
 
 @Component({
-  selector: 'app-auth-splash',
+  selector: 'app-start',
   imports: [HlmButton, RouterLink, TranslatePipe],
-  templateUrl: './splash.component.html',
-  styleUrl: './splash.component.css',
+  templateUrl: './start.component.html',
+  styleUrl: './start.component.css',
 })
-export class SplashComponent {}
+export class StartComponent {}

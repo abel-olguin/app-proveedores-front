@@ -5,7 +5,11 @@ export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'app',
+    loadComponent: () => import('./root-redirect/root-redirect.component').then((m) => m.RootRedirectComponent),
+  },
+  {
+    path: 'start',
+    loadComponent: () => import('./start/start.component').then((m) => m.StartComponent),
   },
   {
     path: 'app',
@@ -18,6 +22,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'app',
+    redirectTo: '',
   },
 ];

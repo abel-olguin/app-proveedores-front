@@ -1,5 +1,5 @@
-<main class="splash-shell">
-  <section class="splash-content" aria-labelledby="splash-title">
+<main class="auth-shell splash-shell">
+  <section class="auth-panel splash-content" aria-labelledby="splash-title">
     <div class="brand-mark" aria-hidden="true">S</div>
 
     <div class="splash-copy">
@@ -7,11 +7,11 @@
       <p>{{ 'auth.splash.description' | translate }}</p>
     </div>
 
-    <div class="splash-actions">
-      <a hlmBtn size="lg" class="splash-button splash-button-primary" routerLink="/auth/register">
+    <div class="auth-actions splash-actions">
+      <a hlmBtn size="lg" class="auth-action splash-button splash-button-primary" routerLink="/auth/register">
         {{ 'auth.splash.register' | translate }}
       </a>
-      <a hlmBtn variant="outline" size="lg" class="splash-button splash-button-outline" routerLink="/auth/login">
+      <a hlmBtn variant="outline" size="lg" class="auth-action splash-button splash-button-outline" routerLink="/auth/login">
         {{ 'auth.splash.login' | translate }}
       </a>
     </div>

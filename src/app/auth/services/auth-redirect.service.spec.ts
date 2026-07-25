@@ -29,14 +29,14 @@ describe('AuthRedirectService', () => {
     expect(navigateByUrl).toHaveBeenCalledWith('/app');
   });
 
-  it('redirects protected path without token to auth splash', async () => {
+  it('redirects protected path without token to start splash', async () => {
     history.pushState(null, '', '/app');
     hasUsableToken.mockReturnValue(false);
 
     TestBed.inject(AuthRedirectService).initialize();
     await Promise.resolve();
 
-    expect(navigateByUrl).toHaveBeenCalledWith('/auth');
+    expect(navigateByUrl).toHaveBeenCalledWith('/start');
   });
 
   it('keeps public auth routes without token', async () => {

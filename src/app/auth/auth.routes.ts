@@ -6,8 +6,7 @@ export const authRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    canActivate: [publicAuthGuard],
-    loadComponent: () => import('./splash/splash.component').then((m) => m.SplashComponent),
+    redirectTo: 'login',
   },
   {
     path: 'login',

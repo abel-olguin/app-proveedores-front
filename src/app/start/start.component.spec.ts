@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { provideTranslateService, TranslateService } from '@ngx-translate/core';
-import { SplashComponent } from './splash.component';
+import { StartComponent } from './start.component';
 
-describe('SplashComponent', () => {
+describe('StartComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SplashComponent],
+      imports: [StartComponent],
       providers: [provideRouter([]), provideTranslateService()],
     }).compileComponents();
 
@@ -25,7 +25,7 @@ describe('SplashComponent', () => {
   });
 
   it('renders centered splash actions', () => {
-    const fixture = TestBed.createComponent(SplashComponent);
+    const fixture = TestBed.createComponent(StartComponent);
     fixture.detectChanges();
 
     expect(fixture.nativeElement.textContent).toContain('Servicios');
