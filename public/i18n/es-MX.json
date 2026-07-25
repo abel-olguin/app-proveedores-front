@@ -1,4 +1,24 @@
 {
+  "auth": {
+    "splash": {
+      "title": "Servicios",
+      "description": "Encuentra y conecta con profesionales verificados cerca de ti",
+      "register": "Regístrate",
+      "login": "Inicia sesión"
+    },
+    "login": {
+      "back": "Volver",
+      "title": "Inicia sesión en tu cuenta",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "showPassword": "Mostrar",
+      "hidePassword": "Ocultar",
+      "continue": "Continuar",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "or": "O",
+      "continueWithGoogle": "Continúa con Google"
+    }
+  },
   "app": {
     "title": "Servicios",
     "eyebrow": "Plataforma privada",

@@ -6,10 +6,16 @@ import {
   AUTH_LOGOUT_PATH,
   AUTH_RECOVER_PASSWORD_PATH,
   AUTH_REGISTER_PATH,
+  AUTH_SPLASH_PATH,
 } from './auth-token.model';
 import { AuthTokenService } from './auth-token.service';
 
-const PUBLIC_AUTH_PATHS = new Set([AUTH_LOGIN_PATH, AUTH_REGISTER_PATH, AUTH_RECOVER_PASSWORD_PATH]);
+const PUBLIC_AUTH_PATHS = new Set([
+  AUTH_SPLASH_PATH,
+  AUTH_LOGIN_PATH,
+  AUTH_REGISTER_PATH,
+  AUTH_RECOVER_PASSWORD_PATH,
+]);
 
 @Injectable({ providedIn: 'root' })
 export class AuthRedirectService {
@@ -29,7 +35,7 @@ export class AuthRedirectService {
       }
 
       if (!hasToken && currentPath !== AUTH_LOGOUT_PATH && !PUBLIC_AUTH_PATHS.has(currentPath)) {
-        void this.router.navigateByUrl(AUTH_LOGIN_PATH);
+        void this.router.navigateByUrl(AUTH_SPLASH_PATH);
       }
     });
   }
